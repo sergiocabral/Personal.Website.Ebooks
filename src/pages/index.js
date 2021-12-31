@@ -45,11 +45,11 @@ const ebooks = [
   },
   {
     title: "Acesso remoto SSH com senha ou chaves de criptografia",
-    slug: "ssh-telnet-protocols-pt"
+    slug: "ssh-password-or-keys-pt"
   },
   {
     title: "SSH remote access with password or encryption keys",
-    slug: "ssh-telnet-protocols-en"
+    slug: "ssh-password-or-keys-en"
   },
   {
     title: "Comparação de Segurança: Protocolos SSH Versus Telnet",
@@ -67,9 +67,9 @@ const IndexPage = () => {
     <main>
       <h1 style={style.h1}>ebooks.sergiocabral.com</h1>
       {ebooks.map(ebook => (
-        <h2 style={style.h2}>
-          <label style={style.h2.label}><a style={style.h2.label.a} href={`/${ebook.slug}.html`}>html</a></label>
-          <label style={style.h2.label}><a style={style.h2.label.a} href={`/${ebook.slug}.pdf`}>pdf</a></label>
+        <h2 key={ebook.slug} style={style.h2}>
+          <span style={style.h2.label}><a style={style.h2.label.a} href={`/${ebook.slug}.html`}>html</a></span>
+          <span style={style.h2.label}><a style={style.h2.label.a} href={`/${ebook.slug}.pdf`}>pdf</a></span>
           {ebook.title}
         </h2>
       ))}
