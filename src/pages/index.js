@@ -19,8 +19,8 @@ const style = {
       fontFamily: "'Share Tech Mono', monospace",
       backgroundColor: "gray",
       marginRight: "0.5em",
-      borderRadius: "0.5em",
-      padding: "0.1em 0.5em 0.25em 0.5em",
+      borderRadius: "0.25em",
+      padding: "0 0.5em 0.1em 0.5em",
       a: {
         color: "white",
         textDecoration: "none",
