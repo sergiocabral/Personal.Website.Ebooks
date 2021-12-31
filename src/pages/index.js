@@ -12,7 +12,7 @@ const style = {
     label: {
       position: "relative",
       top: "-0.1em",
-      fontFamily: "monospace",
+      fontFamily: "'Share Tech Mono', monospace",
       backgroundColor: "gray",
       marginRight: "0.5em",
       borderRadius: "0.5em",
@@ -20,8 +20,8 @@ const style = {
       a: {
         color: "white",
         textDecoration: "none",
-        fontSize: "0.8em",
-      }
+        fontSize: "0.75em",
+      },
     }
   }
 }
