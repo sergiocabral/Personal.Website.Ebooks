@@ -33,11 +33,11 @@ const style = {
 const ebooks = [
   {
     title: "Git para iniciantes: O que você deveria saber?",
-    slug: "git-o-que-voce-deveria-saber"
+    slug: "git"
   },
   {
     title: "Padrões de Projeto: Soluções reutilizáveis de software orientado a objetos",
-    slug: "book-padroes-de-projeto"
+    slug: "gof"
   },
   {
     title: "New Relic: The Complete Introduction to New Relic One [With APM]",
