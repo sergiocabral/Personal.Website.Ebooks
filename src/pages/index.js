@@ -33,35 +33,43 @@ const style = {
 const ebooks = [
   {
     title: "Git para iniciantes: O que você deveria saber?",
-    slug: "git"
+    slug: "git",
+    lang: "",
   },
   {
     title: "Padrões de Projeto: Soluções reutilizáveis de software orientado a objetos",
-    slug: "gof"
+    slug: "gof",
+    lang: "",
   },
   {
     title: "New Relic: The Complete Introduction to New Relic One [With APM]",
-    slug: "course-complete-introduction-new-relic-one"
+    slug: "course-complete-introduction-new-relic-one",
+    lang: "",
   },
   {
     title: "JavaScript e ElasticSearch: Enviando console.log para o banco de dados",
-    slug: "javascript-console-log-com-elasticsearch"
+    slug: "javascript-console-log-elasticsearch",
+    lang: "",
   },
   {
     title: "Acesso remoto SSH com senha ou chaves de criptografia",
-    slug: "ssh-password-or-keys-pt"
+    slug: "ssh-password-or-keys",
+    lang: "",
   },
   {
     title: "SSH remote access with password or encryption keys",
-    slug: "ssh-password-or-keys-en"
+    slug: "ssh-password-or-keys",
+    lang: "en",
   },
   {
     title: "Comparação de Segurança: Protocolos SSH Versus Telnet",
-    slug: "ssh-telnet-protocols-pt"
+    slug: "ssh-telnet-protocols",
+    lang: "",
   },
   {
     title: "Security Comparison: SSH and Telnet Protocols",
-    slug: "ssh-telnet-protocols-en"
+    slug: "ssh-telnet-protocols",
+    lang: "en",
   },
 ]
 
@@ -96,8 +104,8 @@ const IndexPage = () => {
       <h1 style={style.h1}>{ settings.title }</h1>
       {ebooks.map(ebook => (
         <h2 key={ebook.slug} style={style.h2}>
-          <span style={style.h2.label}><a style={style.h2.label.a} href={`/${ebook.slug}.html`}>html</a></span>
-          <span style={style.h2.label}><a style={style.h2.label.a} href={`/${ebook.slug}.pdf`}>pdf</a></span>
+          <span style={style.h2.label}><a style={style.h2.label.a} href={`/${ebook.lang}/${ebook.slug}`.replaceAll('//', '/')}>html</a></span>
+          <span style={style.h2.label}><a style={style.h2.label.a} href={`/${ebook.lang}/${ebook.slug}.pdf`.replaceAll('//', '/')}>pdf</a></span>
           {ebook.title}
         </h2>
       ))}
