@@ -5,29 +5,41 @@ import imgFavicon from '../images/favicon.png'
 import imgOpenGraph from '../images/opengraph.jpg'
 
 const style = {
-  h1: {
+  title: {
     fontSize: "2em",
   },
-  h2: {
-    a: {
-      color: "#000",
-      textDecoration: "none",
-    },
-    label: {
-      position: "relative",
-      top: "-0.1em",
+  item: {
+    cursor: "default",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "stretch",
+    border: "1px solid #ccc",
+    borderRadius: "0.5em",
+    backgroundColor: "rgba(0,0,0,0.25)",
+    marginBottom: "1em",
+    overflow: "hidden",
+    link: {
       fontFamily: "'Share Tech Mono', monospace",
-      backgroundColor: "gray",
-      marginRight: "0.5em",
-      borderRadius: "0.25em",
-      padding: "0 0.5em 0.1em 0.5em",
+      backgroundColor: "rgba(255,255,255,0.75)",
+      borderRight: "1px solid #333",
+      minWidth: "3em",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
       a: {
-        color: "white",
+        color: "#333",
+        margin: "0.5em",
         textDecoration: "none",
-        fontSize: "0.75em",
-      },
+        fontWeight: "bold",
+      }
+    },
+    title: {
+      fontSize: "1.2em",
+      margin: "0.5em",
+      overflow: "auto",
     }
-  }
+  },
 }
 
 const ebooks = [
@@ -101,13 +113,13 @@ const IndexPage = () => {
         <link rel="shortcut icon" href={imgFavicon} />
 
       </Helmet>
-      <h1 style={style.h1}>{ settings.title }</h1>
+      <h1 style={style.title}>{ settings.title }</h1>
       {ebooks.map(ebook => (
-        <h2 key={ebook.slug} style={style.h2}>
-          <span style={style.h2.label}><a style={style.h2.label.a} href={`/${ebook.lang}/${ebook.slug}`.replaceAll('//', '/')}>html</a></span>
-          <span style={style.h2.label}><a style={style.h2.label.a} href={`/${ebook.lang}/${ebook.slug}.pdf`.replaceAll('//', '/')}>pdf</a></span>
-          {ebook.title}
-        </h2>
+        <article key={ebook.slug} style={style.item}>
+          <span style={style.item.link}><a style={style.item.link.a} href={`/${ebook.lang}/${ebook.slug}`.replaceAll('//', '/')}>html</a></span>
+          <span style={style.item.link}><a style={style.item.link.a} href={`/${ebook.lang}/${ebook.slug}.pdf`.replaceAll('//', '/')}>pdf</a></span>
+          <h2 style={style.item.title}>{ebook.title}</h2>
+        </article>
       ))}
     </main>
   )
