@@ -59,8 +59,8 @@ const ebooks = [
     lang: "",
   },
   {
-    title: "JavaScript e ElasticSearch: Enviando console.log para o banco de dados",
-    slug: "javascript-console-log-elasticsearch",
+    title: "NodeJS e ElasticSearch: Persistindo mensagens do console.log",
+    slug: "nodejs-elasticsearch-logging",
     lang: "",
   },
   {
